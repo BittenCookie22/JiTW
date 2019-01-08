@@ -1,0 +1,110 @@
+/* zad.7 */
+
+@media print {
+
+
+  /*wyłączenie wyświetlania*/
+    .menu {
+    display:none;
+  }
+
+   /*czcionka*/
+#tytul{
+	width: 100%;
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    color:black;
+    background:none;
+    text-shadow:none;
+ }
+.main {
+	width: 100%;
+	text-align: justify;
+}
+.main  h1{
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    color:black;
+    background:none;
+    text-shadow:none;
+ }
+
+.main  h2{
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    color:black;
+    background:none;
+    text-shadow:none;
+ }
+.main  h3{
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    color:black;
+    background:none;
+    text-shadow:none;
+ }
+ .main  h4{
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    color:black;
+    background:none;
+    text-shadow:none;
+ }
+ .main  h5{
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    color:black;
+    background:none;
+    text-shadow:none;
+ }
+ .main  h6{
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    color:black;
+    background:none;
+    text-shadow:none;
+ }
+ .main  p{
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    color:black;
+    background:none;
+    text-shadow:none;
+ }
+ .main  p * {
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    color:black;
+    background:none;
+    text-shadow:none;
+ }
+
+ .main p:first-letter{
+	color: black; 
+	font-family: 'Times New Roman', serif; 
+	font-style: italic;
+	font-size: 30px; 
+}
+
+/* obrazki */
+.main img{page-break-inside: avoid;}
+.img1 {
+	display: block;
+    max-width:100%;
+     margin-left:0;
+     margin-right: auto;
+
+  } 
+
+.img2 {
+		display: block;
+
+    max-width:100%;
+    height: 20em;
+     margin-left:auto;
+     margin-right: 0;
+  } 
+
+
+
+/* tabelka */
+.main td{
+	border: 2px black solid;
+}
+.main table{
+
+	border: 4px black solid;
+} 
+
+

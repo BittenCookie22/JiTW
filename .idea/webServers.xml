@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="98f1a76d-6852-48a4-9c9d-e6735b03d7cf" name="borg" url="http://borg.kis.agh.edu.pl/~binejoan">
+        <fileTransfer host="borg.kis.agh.edu.pl" port="22" rootFolder="/home/students/b/binejoan" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

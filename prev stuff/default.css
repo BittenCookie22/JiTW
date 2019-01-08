@@ -1,0 +1,165 @@
+/* zad.1 */
+
+
+body{
+        background-color:pink;
+	       margin: 0;
+	       padding: 0;
+}
+.main h1 {color:#DC143C} 
+.main {text-indent:2%}
+.main h1 {letter-spacing:5px}
+.main h2{color:purple}
+.main h3{color:green}
+.main p{font-family:Times}
+
+
+/* zad.2 */
+.main table{
+background-color:#4CAF50;
+border:4px #FFFF00 solid;
+}
+.main th{
+	background-color: #D2691E;
+	border: 3px #00FFFF solid;
+	text-transform: uppercase;
+}
+
+.main td{
+	border: 2px #FFFFF4 solid;
+}
+tbody>:nth-child(1){ 
+	text-transform: uppercase;
+}
+col.first {background-color: #00FA9A;}
+col.second{background-color: #BC8F8F}
+col.third {background-color:#2F4F4F}
+
+
+
+/* zad.3 */
+.main ol{
+    list-style-type: upper-roman;
+}
+.main ol>li>ol{
+    list-style-type: lower-roman;
+}
+.main ol>li>ol>li>ol{
+    list-style-type:  lower-greek;
+}
+
+/* zad.4 */
+.img1
+{
+	display: block;
+    margin-right: auto;
+    border-radius: 50%;   
+}
+
+.img2
+{
+    display: block;
+    margin-left:auto;
+    border-radius: 8%;
+    
+}
+
+/* zad.5 */
+head{display: block;
+	box-sizing: border-box;
+	max-width: 960px;
+ 	margin-left: 21em;}
+title {
+	display: block;
+	text-align: center;
+	font-size: 60px;
+	font-style: italic;
+	
+	color: red;
+	background-color: #E6E6FA;
+}
+
+.main {
+		box-sizing: border-box;
+	padding: 2ex;
+	background-color: #FFE4E1;
+	max-width: 960px;
+ 	margin-left: 21em;
+	text-align: justify;
+}
+.main p:first-letter{
+	color: red; 
+	font-family: 'Times New Roman', serif; 
+	font-style: italic;
+	font-size: 30px; 
+}
+
+.menu{
+	top:0;
+	position: fixed;
+	text-align: center;
+	width: 13em;
+	height: auto;
+	margin-left: 0;
+	font-style: inherit;
+    font-family: "Arial", Times, serif;
+    background-color: lightblue;
+    	font-size: 2ex;
+}
+
+.menu ul{
+	list-style: none; padding: 0;
+}
+#strony{background-color: #E6E6FA; border: 6px lightblue solid;
+	font-size: 0.9em;}
+#sekcje{background-color: #E6E6FA;
+	border: 6px lightblue solid;
+  border: lightblue solid;
+	max-height: 20ex;
+	font-size: 0.7em;
+	overflow-y: scroll
+
+}
+
+
+/* zad.6 */
+.menu a.link:hover {color: red;}
+.menu a.link:hover {background: #FFE4E1;}
+.menu a.link{cursor: default;}
+.menu a {text-decoration: none;padding: 2ex;display: block}
+
+
+/* zad.9 */
+
+@media screen and (max-width: 800px) {
+.menu::before{
+  content: "Menu";
+  color: #2A97B0;
+  background-color: Lavender;
+  height: 4ex;
+  display: inline-block;
+  width: 3em;
+  margin: 0;
+  border: 4px pink solid;
+  padding:0;
+}
+.menu{
+	width: auto;
+}
+.menu:hover{
+	width: 60%;
+}
+.menu{
+  position: sticky;
+  top: -1px;
+}
+.menu *{
+	display: none;
+}
+.menu:hover *{
+	display: block;
+}
+.main,head{
+	margin-left: 0;
+}
+}
