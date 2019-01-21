@@ -3,18 +3,18 @@
 
 define ("wpis_semafor",2222);
 $BASE_PATH = ".";
-function fileCounter($files)
-{
-    $file_count = count($files["name"]);
-   // $j = 0;
-    for ($i = 0, $j = 0; $i < $file_count; $i++) {
-        if ($files["error"][$i] == 0) {
-            $j++;
-        }
-    }
-    return $j;
-
-}
+//function fileCounter($files)
+//{
+//    $file_count = count($files["name"]);
+//   // $j = 0;
+//    for ($i = 0, $j = 0; $i < $file_count; $i++) {
+//        if ($files["error"][$i] == 0) {
+//            $j++;
+//        }
+//    }
+//    return $j;
+//
+//}
 
 function getBlogIfExist($BASE_PATH, $user, $password)
 {
@@ -124,7 +124,7 @@ if(
     isset($date) and
     isset($time) and
     isset($data["blogentry"]) and
-    (fileCounter($data["files"])<=3)and
+   // (fileCounter($data["files"])<=3)and
     mb_ereg_match("[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}","$date $time")
 )
 ){

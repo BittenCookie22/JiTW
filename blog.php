@@ -109,8 +109,17 @@ function showBlog($blogPath, $blog)
     <head>
         <meta http-equiv="content-type" content="application/xhtml+xml; charset =utf-8"/>
         <title><?php echo $blog?></title>
+
+        <link type="text/css" rel="stylesheet" title="domyślny" href="styles.css"/>
+        <link type="text/css" rel="alternate stylesheet" title="alternatywny" href="other.css"/>
+        <link type="text/css" rel="alternate stylesheet" title="alternatywny" href="other1.css"/>
+        <link type="text/css" rel="alternate stylesheet" title="alternatywny2" href="another.css"/>
+        <link type="text/css" rel="stylesheet"  href="persistant.css"/>
+
+        <script type="text/javascript" src="cookie_styles.js"></script>
     </head>
-    <body>
+    <body onload="listOfStyles()">
+    <ul id="styleList"> </ul>
     <?php include("Menu.php") ?>
     <?php
     $info = readFromInfo($blogPath, False);
@@ -144,8 +153,16 @@ function listBlogs($BASE_PATH)
     <head>
         <meta http-equiv="content-type" content="application/xhtml+xml; charset =utf-8"/>
         <title>Lista Blogów</title>
+        <link type="text/css" rel="stylesheet" title="domyślny" href="styles.css"/>
+        <link type="text/css" rel="alternate stylesheet" title="alternatywny" href="other.css"/>
+        <link type="text/css" rel="alternate stylesheet" title="alternatywny" href="other1.css"/>
+        <link type="text/css" rel="alternate stylesheet" title="alternatywny2" href="another.css"/>
+        <link type="text/css" rel="stylesheet"  href="persistant.css"/>
+
+        <script type="text/javascript" src="cookie_styles.js"></script>
     </head>
-    <body>
+    <body onload="listOfStyles()">
+    <ul id="styleList"> </ul>
 
     <?php include("Menu.php") ?>
     <ul>

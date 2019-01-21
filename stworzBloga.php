@@ -6,10 +6,17 @@
 <head>
     <meta http-equiv="content-type" content="application/xhtml+xml; charset =utf-8"/>
     <title>Tworzenie bloga</title>
+
+    <link type="text/css" rel="stylesheet" title="domyślny" href="styles.css"/>
+    <link type="text/css" rel="alternate stylesheet" title="alternatywny" href="other.css"/>
+    <link type="text/css" rel="alternate stylesheet" title="alternatywny" href="other1.css"/>
+    <link type="text/css" rel="alternate stylesheet" title="alternatywny2" href="another.css"/>
+    <link type="text/css" rel="stylesheet"  href="persistant.css"/>
+
+    <script type="text/javascript" src="cookie_styles.js"></script>
 </head>
-
-
-<body>
+<body onload="listOfStyles()">
+<ul id="styleList"> </ul>
 <?php  include("Menu.php") ?>
 <?php
 if ($_GET["err"] == "zajete"){

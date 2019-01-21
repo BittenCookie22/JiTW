@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Blog - czat</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+
+    <link type="text/css" rel="stylesheet" title="domyślny" href="styles.css"/>
+    <link type="text/css" rel="alternate stylesheet" title="alternatywny" href="other.css"/>
+    <link type="text/css" rel="alternate stylesheet" title="alternatywny" href="other1.css"/>
+    <link type="text/css" rel="alternate stylesheet" title="alternatywny2" href="another.css"/>
+    <link type="text/css" rel="stylesheet"  href="persistant.css"/>
+
+    <script type="text/javascript" src="cookie_styles.js"></script>
+
+    <script>
+
+
+        function checkValues() {
+
+            return document.getElementById("nick").value && document.getElementById("message").value; // True jesli wpisane
+        }
+
+        function checked() {
+            return document.getElementById("check").checked; // True jest zaznaczony
+        }
+
+
+        // AJAX - wyswietlanie wiadomosci
+        function update(timepstamp) {
+            document.getElementById("chat").innerHTML = ""; // Najpierw czyscimy czat
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", "messages.php?client_timepstamp="+timepstamp, true);
+            xmlhttp.send();
+
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 3 && xmlhttp.status == 200) { // Ladowanie polaczenia
+                    if (checked()) { // Jesli checkbox zaznaczony to wyswietlenie wyniku dzialania skryptu messages.php
+                        // document.getElementById("chat").innerHTML = xmlhttp.responseText;
+                        // client_timepstamp = xmlhttp.responseText;
+                        var obj = JSON.parse(xmlhttp.responseText);
+                        var zawartosc_chatu = "";
+                        for (var i=0; i< obj.lines.length ; i++){
+                            zawartosc_chatu+=obj.lines[i]+"\n";
+                        }
+                        document.getElementById("chat").value = zawartosc_chatu; // aktualizacja chatu
+                        let client_timepstamp =   obj.timestamp; // aktualizacja timestampa
+                        console.log(client_timepstamp);
+                        update(client_timepstamp);
+                    }
+                }
+                // if (xmlhttp.readyState == 4) { // Zamykanie polaczenia
+                //      // Specyfikacja zapytania
+                //     xmlhttp.send(); // Wyslanie zapytania
+                //     console.log(client_timepstamp,"huhihh");
+                // }
+            }
+            // xmlhttp.open("GET", "messages.php?client_timepstamp=0", true);
+            // xmlhttp.send();
+
+        }
+
+        // wysylanie wiadomosci
+        function send() {
+            var xmlhttp = new XMLHttpRequest();
+
+            var valueNick = encodeURIComponent(document.getElementById("nick").value); // Pobranie nicku
+            var valueMessage = encodeURIComponent(document.getElementById("message").value); // Pobranie wiadomosci
+
+            xmlhttp.open("GET", "send.php?nick=" + valueNick + "&message=" + valueMessage, true); // Parametry do .php
+            xmlhttp.send();
+
+            document.getElementById("message").value = ""; //wyczyszczenie wiadomosci
+        }
+    </script>
+
+</head>
+<body onload="listOfStyles()">
+<ul id="styleList"> </ul>
+<h2>Uruchom chat</h2>
+<input type="checkbox" name="check" id="check" onchange="update(0);"/></br>
+<textarea rows="30" cols="100" id="chat" disabled></textarea><br/>
+Nick: <input type="text" name="nick" id="nick"/><br/>
+Wiadomosc: <br/><input type="text" name="message" id="message"/><br/>
+<button type="button" value="Wyślij"
+        onclick=
+                "
+                if ( !checkValues()) { alert('Uzupelnij oba pola dotyczace uzytkownika!'); }
+                 else if (checked() ) { send(); }
+                 else { alert('Czat jest nieaktywny!'); }">
+    Wyślij
+</button>
+<br/><br/><br/>
+<a href="http://borg.kis.agh.edu.pl/~binejoan/blog.php">Strona główna</a>
+
+</body>
+</html>
