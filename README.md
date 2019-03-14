@@ -13,3 +13,10 @@ Elementy bloga:
 Każdy formularz posiada przycisk służący do usunięcia wprowadzonych danych, etykiety przycisków w języku dokumentu.
 
 - interaktywny komunikator dla osób odwiedzających bloga
+
+
+Dokładny opis projektu:
+http://home.agh.edu.pl/~wojnicki/wiki/pl:jitw:lab_jitw_html - część HTML
+http://home.agh.edu.pl/~wojnicki/wiki/pl:jitw:lab_jitw_css - część CSS
+http://home.agh.edu.pl/~wojnicki/wiki/pl:jitw:lab_jitw_js_projekt - część Java Script
+http://home.agh.edu.pl/~wojnicki/wiki/pl:jitw:lab_jitw_php_projekt - część PHP
