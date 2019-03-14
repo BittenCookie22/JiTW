@@ -6,7 +6,7 @@ OPIS PROJEKTU
 
 Elementy bloga:
 
-- formularz do założenia bloga umożliwiaa wprowadzenie nazwy blogu, nazwy użytkownika, hasła użytkownika, opisu blogu (wiele linii tekstu)
+- formularz do założenia bloga umożliwia wprowadzenie nazwy blogu, nazwy użytkownika, hasła użytkownika, opisu blogu (wiele linii tekstu)
 - formularz umożliwiający dokonanie wpisu w blogu: nazwa użytkownika, hasło (niewidoczne przy wpisywaniu), wpis (wiele linii tekstu), data (pole tekstowe: RRRR-MM-DD, zawierające aktualną datę), godzina (pole tekstowe: GG:MM), pliki do dołączenia do wpisu 
 - formularz umożliwiający dodanie komentarza do wpisu w blogu: rodzaj komentarza: pozytywny, negatywny, neutralny (lista wyboru), komentarz (wiele linii tekstu), imię/nazwisko/pseudonim komentującego (pole tekstowe)
 
